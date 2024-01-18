@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(45, 45, 45);
+    perspective: 800px;
+    perspective-origin: top right;
+    color: black;
+    display: flex;
+}
+
+.transition {
+    background-color: lightblue;
+    color: black;
+    border: none;
+    padding: 1rem;
+    transition: 1s;
+    margin: 5rem;
+    border-radius: 10px;
+}
+.transition:hover{
+    scale: 1.5;
+}
+
+.button-container {
+    width: 800px;
+    height: 100vh;
+    background-color: #ffffff;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 20px;
+    color: #ffffff;
+    background-color: #0e79dd;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  
+  .popup-modal {
+    padding: 32px 64px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    text-align: center;
+  }
+  
+  .popup-modal p {
+    margin-bottom: 24px;
+  }
+  
+  .backdrop {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    background: #000;
+    opacity: 20%;
+  }
+  
+  .popup-modal.show {
+    opacity: 100%;
+    pointer-events: all;
+    animation-fill-mode: both;
+  }
+  
+ .popup-modal {
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in;
+    transform: translate(-50%, -600px);
+ }
+
+ .popup-modal.show {
+    transform: translate(-50%, -50%);
+ }
+
